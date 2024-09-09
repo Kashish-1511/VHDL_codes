@@ -1,6 +1,8 @@
 Hello file contains code I used for my small project in VHDL
 Tools:- Xilinx Vivado, zboard, Spartan6.
 
+For_moving light 
+```
 Using “use” keyword, the library IEEE.STD_LOGIC_1164.ALL is imported in the VHDL design code. 
 This library contains std logic functions which is used in the code. It is also used for signed, unsigned types and arithmetic operations.
 
@@ -32,3 +34,33 @@ At the rising edge of clk, buttons for rotation, stop and load switch are checke
 
  ROTATIONAL LOGIC
 When sr_pulse is 1 at rising edge of clk, logic as defined in algorithm for each patternis implemented.
+```
+For SPI
+```
+
+The SPI master communicates with SPI slave devices, such as sensors, using the SPI protocol. The provided VHDL code includes a state machine to control the SPI transaction, including clock generation, data transmission, and reception.
+
+## Features
+
+State Machine Control: Manages SPI communication using a state machine with states for idle, sending, receiving, and completion.
+Clock Generation: Generates the SPI clock (SCK) using a clock divider.
+Data Transmission: Sends 8-bit data to an SPI slave device.
+Data Reception: Receives 8-bit data from an SPI slave device.
+Slave Select Management: Controls the SS (Slave Select) line to activate/deactivate the slave.
+
+Usage
+
+Inputs
+
+`clk`: System clock input.
+`reset`: Asynchronous reset input.
+`start`: Start signal for initiating SPI communication.
+
+Outputs
+
+`MOSI`: Master Out Slave In signal to send data to the slave.
+`MISO`: Master In Slave Out signal to receive data from the slave.
+`SCK`: Serial Clock signal.
+`SS`: Slave Select signal.
+`sensor_data`: 8-bit data received from the sensor.
+```
