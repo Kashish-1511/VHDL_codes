@@ -1,5 +1,3 @@
-
-```vhdl
 library IEEE;
 use IEEE.STD LOGIC 1164.ALL;
 use IEEE.NUMERIC STD.ALL;
@@ -77,5 +75,3 @@ BEGIN
 END process irrot_pil
 
 end Behavioral;
-
-```
